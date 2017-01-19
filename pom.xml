@@ -16,9 +16,7 @@
         <jackson.version>2.7.0</jackson.version>
     </properties>
 
-
     <dependencies>
-
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
@@ -80,11 +78,10 @@
             <version>3.0.1</version>
             <scope>provided</scope>
         </dependency>
-
     </dependencies>
 
     <build>
-        <finalName>spring-angular2-crud</finalName>
+        <finalName>io-angular2-spring</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.tomcat.maven</groupId>
