@@ -1,0 +1,11 @@
+# angular2-webpack folders
+angular2/node_modules/
+angular2/node/
+
+# java folders
+.git/
+target/
+.idea/
+*.iml
+
+

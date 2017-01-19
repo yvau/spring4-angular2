@@ -1,0 +1,31 @@
+
+<div class="ui secondary segment">
+  <div class="ui grey small horizontal statistic">
+    <div class="value">Listings of contacts</div>
+  </div>
+</div>
+<div class="ui cards">
+        <div *ngFor="let user of users" class="ui centered card">
+          <div class="content">
+            <img class="right floated mini ui image" src="http://semantic-ui.com/images/avatar/large/elliot.jpg">
+            <div class="header">
+              {{ user.lastName }}
+            </div>
+            <div class="meta">
+              {{ user.firstName }}
+            </div>
+            <div class="description">
+              gender: {{ user.gender }} <br />
+              email: {{ user.email }} <br />
+              phone: {{ user.phone == '' ? 'not' : user.phone }} <br />
+            </div>
+          </div>
+          <div class="extra content">
+            <div class="ui two buttons">
+              <div class="ui basic yellow button">Edit</div>
+              <div class="ui basic red button">Delete</div>
+            </div>
+          </div>
+        </div>
+
+      </div>

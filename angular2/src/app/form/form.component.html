@@ -1,0 +1,63 @@
+     <form #f="ngForm" class="ui form segment" novalidate (ngSubmit)="onSubmit(f.value, f.valid)">
+        <a class="ui blue ribbon label">Register new contacts</a>
+        <p></p>
+        <div class="two fields">
+          <div [ngClass]="{'error': lastName.errors && (lastName.dirty || lastName.touched) }" class="field">
+            <label for="lastName">LastName *</label>
+            <input placeholder="LastName" id="lastName" 
+                   name="lastName" type="text" 
+                   required="required" [(ngModel)]="model.lastName"
+                   #lastName="ngModel">
+            <div *ngIf="lastName.errors && (lastName.dirty || lastName.touched) "
+            class="ui basic red pointing prompt label transition visible">Please enter your name</div>
+          </div>
+          <div [ngClass]="{'error': firstName.errors && (firstName.dirty || firstName.touched) }" class="field">
+            <label for="firstName">FirstName *</label>
+            <input placeholder="FirstName" id="firstName"  
+                   name="firstName" type="text" 
+                   required="required" [(ngModel)]="model.firstName"
+                   #firstName="ngModel">
+            <div *ngIf="firstName.errors && (firstName.dirty || firstName.touched) "
+            class="ui basic red pointing prompt label transition visible">Please enter your first name</div>
+          </div>
+        </div>
+        <div class="two fields">
+          <div [ngClass]="{'error': gender.errors && (gender.dirty || gender.touched) }" class="field">
+            <label for="gender">Gender *</label>
+            <div class="ui">
+              <select name="gender" id="gender" required="required" [(ngModel)]="model.gender" #gender="ngModel">
+                <option value="">select value</option>
+                <option value="female">female</option>
+                <option value="male">male</option>
+              </select>
+            </div>
+            <div *ngIf="gender.errors && (gender.dirty || gender.touched) "
+            class="ui basic red pointing prompt label transition visible">Please enter your gender</div>
+          </div>
+          <div [ngClass]="{'error': email.errors && (email.dirty || email.touched) }" class="field">
+          <label for="email">Email *</label>
+          <input placeholder="Email" id="email" 
+                 name="email" type="text" 
+                 required="required" [(ngModel)]="model.email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+                 #email="ngModel">
+            <div *ngIf="email.errors && (email.dirty || email.touched) "
+            class="ui basic red pointing prompt label transition visible">
+              <span [hidden]="!email.errors.required"> enter your email</span>
+              <span [hidden]="!email.errors.pattern"> enter a valid email</span>
+            </div>
+          </div>
+        </div>
+        <div [ngClass]="{'error': phone.errors && (phone.dirty || phone.touched) }" class="field">
+          <label for="phone">Phone</label>
+            <input placeholder="Phone" id="phone" 
+                   name="phone" type="text" [(ngModel)]="model.phone"
+                   #phone="ngModel">
+          <div *ngIf="phone.errors && (phone.dirty || phone.touched) "
+            class="ui basic red pointing prompt label transition visible">Please enter your phone</div>
+        </div>
+
+        <button [disabled]="!f.form.valid" class="ui primary submit button">Submit</button>
+        <button class="ui reset button">Reset</button>
+      </form>
+
+      <div class="ui hidden divider"></div>
