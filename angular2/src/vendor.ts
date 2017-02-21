@@ -11,3 +11,9 @@ import '@angularclass/hmr';
 
 // Other vendors for example jQuery, Lodash or Bootstrap
 // You can import js, ts, css, sass, ...
+
+import 'jquery/dist/jquery.min.js';
+import 'semantic-ui-css/semantic.min.css';
+import 'semantic-ui-css/semantic.min.js';
+import 'toastr/build/toastr.min.css';
+import 'toastr/build/toastr.min.js';

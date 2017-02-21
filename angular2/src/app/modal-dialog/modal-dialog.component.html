@@ -1,0 +1,22 @@
+<div class="ui basic modal">
+  <div class="ui icon header">
+    <img class="mini ui image" src="http://semantic-ui.com/images/avatar/large/elliot.jpg">
+    <br/>
+    <br/>
+    Delete
+  </div>
+  <div class="content">
+    <p>Do you really want to delete?  <span style="color: blue">{{user?.firstName}} {{user?.lastName}}</span></p>
+    <p><Strong style="color:red">Notice that : </Strong><i>this action is irreversible !</i></p>
+  </div>
+  <div class="actions">
+    <div class="ui red basic cancel inverted button">
+      <i class="remove icon"></i>
+      No
+    </div>
+    <div (click)="deleteUser(user?.id)" class="ui green ok inverted button">
+      <i class="checkmark icon"></i>
+      Yes
+    </div>
+  </div>
+</div>

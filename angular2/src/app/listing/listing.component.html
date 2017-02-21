@@ -23,9 +23,10 @@
           <div class="extra content">
             <div class="ui two buttons">
               <div class="ui basic yellow button">Edit</div>
-              <div class="ui basic red button">Delete</div>
+              <div class="ui basic red button" (click)="showConfirmationDialog(user.id)">Delete</div>
             </div>
           </div>
         </div>
 
       </div>
+<my-modal-dialog (notifyListing)="getNotification($event)" [user]="user"></my-modal-dialog>

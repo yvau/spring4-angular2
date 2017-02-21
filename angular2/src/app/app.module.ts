@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { FormComponent } from './form/form.component';
 import { ListingComponent } from './listing/listing.component';
+import { ModalDialogComponent } from './modal-dialog/modal-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     FormComponent,
-    ListingComponent
+    ListingComponent,
+    ModalDialogComponent
   ],
   imports: [
     BrowserModule,
