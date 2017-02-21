@@ -13,4 +13,5 @@ src/main/webapp/resources/js/*.js.map
 src/main/webapp/resources/css/*.css
 src/main/webapp/resources/css/*.css.map
 
+src/main/webapp/resources/fonts/*.*
 

@@ -168,7 +168,8 @@ module.exports = function makeWebpackConfig() {
     new webpack.ProvidePlugin({
           jQuery: 'jquery',
           $: 'jquery',
-          jquery: 'jquery'
+          jquery: 'jquery',
+          toastr: 'toastr'
         }),
 
     // Workaround needed for angular 2 angular/angular#11580

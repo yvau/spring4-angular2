@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ListingService } from './listing.service';
 import { User } from '../form/user.model';
+
 declare var $: any;
 declare var toastr: any;
 
